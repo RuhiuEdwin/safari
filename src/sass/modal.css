@@ -1,0 +1,216 @@
+.popup{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: none;
+  position: relative;
+  z-index: 9999 !important;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: -2vh;
+}
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+.popup-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: var(--white);
+  border-radius: .1vw;
+  width: 25%;
+  min-width: 300px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.popupheader{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--gray);
+  margin-bottom: 2vw;
+  padding: 1vw;
+}
+.popupheaderclear{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--gray);
+  margin-bottom: 2vw;
+  padding: 1vw;
+}
+.popup-main{
+  color: var(--gray);
+}
+
+.assetname{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--gray);
+  margin-bottom: 2vw;
+  padding: 1vw;
+}
+.assetserial{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--gray);
+  margin-bottom: 2vw;
+  padding: 1vw;
+}
+.close{
+  border: none;
+  background-color: var(--white) ;
+}
+.rowname{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.rowserial{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.col-sm-3 h6{
+  display: flex;
+  flex-direction: row;
+
+  margin: 0 1rem;
+}
+.col-sm-9 text-secondary{
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.close:hover{
+  color: var(var--backgroundgray);
+}
+.popup-main{
+  padding: 0 1vw 1vw 1vw;
+}
+input{
+  width: 95%;
+  padding: 1vw .0 1vw .5vw; 
+  background-color: var(--white);
+  border: 1px solid var(--offwhite);
+}
+select{
+  width: 98%;
+  padding: 1vw .5vw;
+  background-color: var(--white);
+  border: 1px solid var(--offwhite);
+}
+.createuser, .assignasset{
+  background-color: var(--green);
+  color: var(--white);
+  font-weight: bold;
+  padding: 1vw .5vw;
+  width: 98%;
+  margin-top: 2vw;
+}
+.suspenduser{
+  background-color: var(--pinkish);
+  font-weight: bold;
+  padding: 1vw .5vw;
+  width: 50%;
+  border-radius: 5px;
+  margin-top: 2vw;
+}
+.logout{
+  background-color: var(--danger);
+  color: var(--white);
+  font-weight: bold;
+  padding: 1vw .5vw;
+  width: 98%;
+  margin-top: 2vw;
+}
+.close:hover,
+.logout:hover,
+.createuser:hover{
+  opacity: .9;
+}
+.clearoff{
+  background-color: var(--green);
+  color: var(--white);
+  font-weight: bold;
+  padding: 1vw .5vw;
+  width: 98%;
+  margin-top: 2vw;
+}
+.suspend{
+  background-color: var(--green);
+  color: var(--white);
+  font-weight: bold;
+  padding: 1vw .5vw;
+  width: 98%;
+  margin-top: 2vw;
+}
+.name{
+  margin-bottom: 1vw ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.email_address{
+  margin-bottom: 1vw ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.department{
+  margin-bottom: 1vw ;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.upload-img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.add-img{
+  height: 100%;
+  position: relative;
+}
+.img-head{
+  display: flex;
+  align-items: center;
+}
+.add-img,.email, .password,.username, .accessories, .assign-assets{
+  margin-bottom: 1vw ;
+}
+.add-img,.email h4, .password h4,.username h4, .accessories h4, .assign-assets h4{
+  margin-bottom: .5vw ;
+  color: var(--gray);
+}
+@media only screen and (max-width: 800px) { 
+  .popup{
+      width: 102vw;
+  }
+  .popup-content{
+      border-radius: 10px;
+      width: 80%;
+      padding: 20px;
+  }
+  .email, .password,.username, .accessories, .assign-assets{
+      margin-bottom: 10px ;
+  }
+  .email h4, .password h4,.username h4, .accessories h4, .assign-assets h4{
+      margin-bottom: 5px;
+  }
+}

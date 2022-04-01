@@ -1,4 +1,7 @@
 import React from 'react'
+import { Splide, SplideSlide } from '@splidejs/react-splide';
+import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
+import { useInView } from 'react-intersection-observer';
 import '../sass/home.css'
 import laundry from '../images/laundry-basket (2).png'
 import bag from '../images/bag.png'
@@ -15,7 +18,11 @@ import pegs from '../images/pegs.jpg'
 import deco from '../images/deco.jpg'
 import { BiChevronRight} from 'react-icons/bi'
 
-const Home = () => {
+const Home = () => { 
+  const { ref, inView, entry } = useInView({
+  /* Optional options */
+  threshold: 0,
+});
   return (
     <div>
     <div className='main'>
@@ -173,26 +180,32 @@ const Home = () => {
       <p className='testimonial-info'>
         we are good, but dont take our word for it, here is what people are saying about us
       </p>
-      <div className='testimonials-wrapper'>
-        <div className='testimonial'>
-          <div className='testimonial-details'>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          </div>
-            <img src={client} className='testimonial-img'/>
-        </div>
-        <div className='testimonial'>
-          <div className='testimonial-details'>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          </div>
-            <img src={client} className='testimonial-img'/>
-        </div>
-        <div className='testimonial'>
-          <div className='testimonial-details'>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-          </div>
-            <img src={client} className='testimonial-img'/>
-        </div>
-      </div>
+      <Splide options={ {rewind: true, gap: '10px',} } >
+                <SplideSlide>
+                <div className='testimonial'>
+                  <div className='testimonial-details'>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                  </div>
+                    <img src={client} className='testimonial-img'/>
+                </div>
+                </SplideSlide>
+                <SplideSlide>
+                <div className='testimonial'>
+                  <div className='testimonial-details'>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                  </div>
+                    <img src={client} className='testimonial-img'/>
+                </div>
+                </SplideSlide>
+                <SplideSlide>
+                <div className='testimonial'>
+                  <div className='testimonial-details'>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+                  </div>
+                    <img src={client} className='testimonial-img'/>
+                </div>
+                </SplideSlide>
+            </Splide>
     </div>
     <div className='contact' id='contact'>
       <div className='contact-wrapper'>

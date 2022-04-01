@@ -1,0 +1,98 @@
+.laundrybasket{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding:50px 10px;
+    gap: 20px;
+    background: linear-gradient(to right, rgba(255, 255, 255, .95), rgba(255, 255, 255, .95)),  url(../images/graphic.png);
+    background-position: center;
+    background-repeat: repeat;
+    background-size: contain;
+}
+.lb-title{
+    font-size: 1.2rem;
+    font-weight:bold;
+    color: var(--black);
+}
+.lb-intro{
+    font-size: 1rem;
+    color: var(--blackish);
+    width: 100%;
+    max-width: 500px;
+}
+.lb-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+}
+.lb-product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    width: 250px;
+    background: var(--gray);
+    border-radius: 5px;
+}
+.lb-name{
+    font-weight: bold;
+    color: var(--blue);
+}
+.lb-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: var(--black);
+}
+.lb-price{
+    padding: 5px 10px;
+    background: var(--white);
+}
+.laundrybasket .repeat-wrapper{
+    margin-top: 0;
+}
+.lb-add,
+.select{
+    color: var(--white);
+    padding: 5px 10px;
+    background: var(--gold);
+    border-radius: 5px;
+}
+.select:hover{
+    box-shadow: 3px 3px #ccc;
+}
+.lb-img{
+    width: 70%;
+    height: 200px;
+}
+@media only screen and (min-width: 600px) {
+    .lb-wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+@media only screen and (min-width: 900px) {
+    .lb-wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .lb-product{
+        width: 300px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .lb-wrapper{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
